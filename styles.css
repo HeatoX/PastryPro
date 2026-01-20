@@ -464,8 +464,162 @@ h1 {
     box-shadow: 0 5px 15px rgba(168, 85, 247, 0.4);
 }
 
-@media (max-width: 768px) {
-    .steps-container {
+/* Showcase / Tour Section */
+.showcase-section {
+    padding: 6rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.feature-row {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    margin-bottom: 6rem;
+}
+
+.feature-row.reverse {
+    flex-direction: row-reverse;
+}
+
+.feature-text {
+    flex: 1;
+}
+
+.feature-text h3 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(to right, #f472b6, #a78bfa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.feature-text p {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+.feature-visual {
+    flex: 1.5;
+    background: rgba(15, 23, 42, 0.6);
+    border-radius: 1rem;
+    border: 1px solid var(--glass-border);
+    overflow: hidden;
+    height: 350px;
+    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.5);
+    position: relative;
+    padding: 1rem;
+}
+
+/* CSS Mockups for Specific Features */
+/* Insumos List Look */
+.mockup-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    padding: 1rem;
+}
+
+.mockup-row {
+    height: 40px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+    justify-content: space-between;
+}
+
+.mockup-row::before {
+    content: '';
+    width: 30%;
+    height: 8px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+}
+
+.mockup-row::after {
+    content: '';
+    width: 15%;
+    height: 8px;
+    background: var(--primary);
+    border-radius: 4px;
+    opacity: 0.5;
+}
+
+/* Recipe Card Look */
+.mockup-recipe-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.mockup-card {
+    height: 140px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.mockup-card-title {
+    width: 70%;
+    height: 12px;
+    background: white;
+    margin-bottom: 0.5rem;
+    border-radius: 4px;
+    opacity: 0.8;
+}
+
+.mockup-card-price {
+    width: 40%;
+    height: 10px;
+    background: var(--accent);
+    border-radius: 4px;
+}
+
+/* Finance Look */
+.mockup-finance {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    height: 100%;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+.mock-bar {
+    width: 15%;
+    background: var(--primary);
+    border-radius: 8px 8px 0 0;
+    opacity: 0.8;
+}
+
+.mock-line {
+    position: absolute;
+    top: 40%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--accent);
+    opacity: 0.5;
+    transform: rotate(-5deg);
+}
+
+@media (max-width: 900px) {
+
+    .feature-row,
+    .feature-row.reverse {
         flex-direction: column;
+        gap: 2rem;
+    }
+
+    .feature-visual {
+        width: 100%;
+        height: 250px;
     }
 }
